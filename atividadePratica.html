@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Pratica Valores</title>
+</head>
+<body>
+    <h1>Trabalhando com Valores</h1>
+    <h2>Projeto Calculadora Web</h2>
+    <label name="lblv1">Insira o Valor 1</label>
+    <input name="v1" id="v1" type="number">
+    <label name="lblv2">Insira o Valor 2</label>
+    <input name="v2" id="v2" type="number">
+    <br>
+    <p>Escolha a Operacao</p>
+    <button type="button" onclick="processar('soma')">Soma</button>
+    <button type="button" onclick="processar('subtracao')">subtracao</button>
+    <button type="button" onclick="processar('divisao')">divisao</button>
+    <button type="button" onclick="processar('multiplicacao')">multiplicacao</button>
+    <div id="resultado" class="resultado" style="color: blue">O Resultado eh </div>
+</body>
+<script>
+    function processar(operacao){
+        
+        var valor1 = document.getElementById('v1');
+        var valor2 = document.getElementById('v2');
+        var resposta;
+        console.log(operacao);
+        switch(operacao)
+          {
+            case "soma":
+                resposta = parseInt(valor1.value) + parseInt(valor2.value);
+                break;
+            case "subtracao":
+                resposta = parseInt(valor1.value) - parseInt(valor2.value);
+                break;
+            case "multiplicacao":
+                resposta = parseInt(valor1.value) * parseInt(valor2.value);
+                break;
+            case "divisao":
+                resposta = parseInt(valor1.value) / parseInt(valor2.value);
+                break;
+            default:                
+          }
+          console.log(resposta);
+          if (resposta >'10')
+          {
+            resposta = (resposta + "  Valor acima de 10");
+          }
+        var divresultados = document.querySelector(".resultado");
+        var textodiv = document.createTextNode( resposta);
+        divresultados.appendChild(textodiv);
+
+    }
+    
+</script>
+</html>

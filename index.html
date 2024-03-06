@@ -1,128 +1,204 @@
 <!DOCTYPE html>
-
-<html lang="en">
-    <head>
-        <!-- <meta charset="UTF-8"> Optado por não acrescentar para permanecer com a escrita conforme digitado com acentos-->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="">
-
-        <title>Pratica Integradora Desenvolvimento de Software</title>
-        <style>
-            p{
-                font-size:20px; color: blue;
-                }
-        </style>
-        <link rel="stylesheet" href="./Css/estilo.css" type="text/css">
-    </head>
-   
+<html   lang="pt-BR">
+<head>
+    <meta   charset="UTF-8">
+    <meta   name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Descomplica Tour</title> 
+ </head>   
     <body>
-        <script>
-             function showAlert(){
-                var nome= document.getElementById('nomes');
-                var sobnome= document.getElementById('sobrenomes');
-                var email= document.getElementById('email');
-                var data= document.getElementById('data'); 
-                var idade = 2022;
-                console.log(nome.value+sobnome.value);
-                console.log(email.value);
-                console.log('2022'-data.value);
-                var element = document.querySelector(".divtexto");
-                var text = document.createTextNode(nome.value + " " +sobrenomes.value + " parabens pelos seus "+ (idade - data.value) + " anos," + "Email confirmado:" + email.value);
-                element.appendChild(text);
-                } 
-        </script>
-
-        <center>
-            <p>
-                <h1>Atividade Prática 2 – Elementos Básicos</h1>
-             </p>
-        </center>
-        <hr>
-        <br> 
-        <p><h2>Atividade Prática</h2></p>
-        <p>Nesta atividade prática, iniciaremos nosso código HTML com uma estrutura básica para desenvolver um site com um layout que evoluirá a cada prática que faremos. Então, para começar faremos os seguintes passos:
-        <ol><li>1º Passo: Crie uma pasta no seu computador com o nome de PraticaSoftware_Seu_nome_e_sobrenome.</li>
-            <li>2º Passo: Entre nessa pasta e crie o arquivo chamado index.html</li>
-            <li>3º Passo: Nesta pasta também crie a pasta img, css e js</li>
-            <li>4º Passo: No arquivo index.html, criei os elementos base para iniciarmos um documento HTML. 
-                Aqui você deve definir os elementos . Inclua também a tag title com o conteúdo “Pratica Integradora Desenvolvimento de Software”
-            </li>
-        </ol>      
-        </p>
-        <div id="form" name="form">
-        <fieldset>
-        <form action="" ID="formulario" name="formulario" method="get" text-align="center" width="200">
-           <div> 
-            <label id="nome">Nome:</label>
-            <input type="text" maxlength = "100"  placeholder="Seu nome" name="nome"><br>
-            <label id="sobre">Sobrenome:</label>
-            <input type="text" maxlength = "100"  placeholder="Sobrenome" name="sobrenome"><br>
-           
-            <label> Email: </label>   
-             <input type="email"  name="email"><br>
-             <select size = "1" name="sexo">
-                <option selected> Masculino </option>
-                <option> Feminino </option>
-             </select>
-            <br>
-            <label for="Pais">Pais*</label><br>
-            <select name="pais" id="pais">
-                <option value="BR">Brasil</option>
-                <option value="MX">MEXICO</option>
-                <option value="EUA">E.U.A</option>
-            </select>
-            
-
-           </div>                  
-           <div>
-             <label for="cep">Cep*  </label><br>
-             <input type="text" name="cep" id="cep">
-           </div> <br>
-            <label> Observação: </label><br>   
-           <textarea  cols="30" rows="3" name="obs">
-          </textarea>
-            <br>
-           <input onclick="showAlert" type="submit"  value="Enviar" name="Enviar" id="btn_envia">
-  
-            <input type="reset" value="Limpar" name="limpar">
-        </form>
-        </fieldset>
-        </div>
-        <table border=1 cellspacing="2" height="150" width="180">
-            <caption><h3> Atividade Pratica 3</h3></caption>
-            <thead></thead>
-            <tr><td colspan="3">Estilo CSS</td></tr>
-            <tr>
-                <td> Imagem de Fundo</td>
-                <td> Cor do Fundo</td>
-                <td> Cor do Texto</td>
-
-            </tr>
-        </table>
-        <br>
-        <center>
-            <p>
-                <h1>Atividade Prática 3 – Fundamentos do JavaScript</h1>
-             </p>
-             <form name="tarefa3" id="tarefa3" method="post" action="showAlert("agora vai")">
-                <label id="lblnomes">Digite seu Nome:</label>
-                <input type="text" name="nomes" id="nomes"><br>
-                <label id="lblsobrenome">Digite seu Sobrenome:</label>
-                <input type="text" name="sobrenomes" id="sobrenomes"><br>
-                <label id="lblemail">Digite seu Email:</label>
-                <input type="email" name="email" id="email"><br>
-                <label id="lbldata">Digite Ano Nascimento:</label>
-                <input type="number" name="data" id="data"><br>
-             </form>
-                <button type="button" onclick="showAlert()"> Envia</button>
-            
-         
+        <header class="container-fluid p-2 bg-dark text-white text-center" >
+             <h1>Bem Vindo ao Descomplica Tour</h1>
+             <nav   class="navbar navbar-expand-lg bg-gradient alert-light">
+                <div    class=" container-fluid" >
+                    <a  class=" navbar-brand text-white" href="#tabela">Viagens dos Sonhos</a>
+                    <button class=" navbar-toggler" type="button" data-bs-toggle=" collapse" data-bs-target="wnavbarSupportedContent" aria-controls=" navbarSupportedContent">
+                    <span class=" navbar-toggler-icon"></span>
+                    </button>
+                    <div    class=" collapse navbar-collapse    justify-content-end text-white" id=" navbarSupportedContent">
+                        <ul class=" navbar-nav ">
+                            <li class=" nav-item ">
+                                <a  class=" nav-link text-warning" aria-current="page"  href="#Pacotes">Pacotes</a>
+                            </li>
+                            <li class=" nav-item ">
+                                <a  class=" nav-link text-warning" aria-current="page"  href="#Destino">Destino</a>
+                            </li>
+                            <li class=" nav-item ">
+                                <a  class=" nav-link text-warning" aria-current="page"  href="#Pagamento">Pagamento</a>
+                            </li>
+                            <li class=" nav-item ">
+                                <a  class=" nav-link text-warning" aria-current="page"  href="#Contato">Contatos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+             </nav> 
+            <hr>
+        </header>
         
-        <h2><div class="divtexto" id="divtexto">Bem vindo </div></h2>
-        </center>
-<marquee> Nome:Dirceu Carvalho Junior   Modulo:2B Prática Integradora Desenvolvimento de Software </marquee>
-         
+    <section class="    container-fluid bg-light text-center" id="tabela">
+        <h2>Escolha o seu Destino e Desfrute de uma experiÃªncia incrÃ­vel !!</h2>
+        <h2>Confira Destinos mais procurados >></h2>
+        <table class=" table table-light table-striped   table-hover    table-bordered border-light" >
+            <thead  class="table-secondary">
+            <tr>
+                <td>
+                    <figure >
+                        <img src="D:\facu\FrontEnd\Pratica02\curitiba.jpg" alt="Imagem Curitiba" width="350"><figcaption>Curitiba</figcaption>
+                    </figure>    
+                </td>
+                <td> 
+                    <figure>
+                    <img src="D:\facu\FrontEnd\Pratica02\saopaulo.jpg" alt="Imagem Sao Paulo" width="350"><figcaption>SÃ£o Paulo</figcaption>
+                    </figure>                
+                </td>
+                <td>
+                    <figure>
+                        <img src="D:\facu\FrontEnd\Pratica02\riodejaneiro.jpg" alt="Imagem Rio de Janeiro" width="350"><figcaption>Rio de Janeiro</figcaption>
+                    </figure> 
+                </td>
+            </tr>
+        </thead>
+            <tr>
+                <td>
+                    <figure>
+                        <img src="D:\facu\FrontEnd\Pratica02\belohorizonte.jpg" alt="Imagem Belo Horizonte" width="350"><figcaption>Belo Horizonte</figcaption>
+                    </figure> 
+                </td>
+                <td>
+                    <figure>
+                        <img src="D:\facu\FrontEnd\Pratica02\salvador.jpg" alt="Imagem Salvador" width="350"><figcaption>Salvador</figcaption>
+                    </figure>
+                </td>
+                <td>
+                    <figure>
+                        <img src="D:\facu\FrontEnd\Pratica02\nisekojapan.jpg" alt="Imagem Niseko Japan" width="450"><figcaption>Niseko Japan</figcaption>
+                    </figure>
+                </td>
+            </tr>
+       
+        </table>
+    </section>
+    <section class=" container-fluid bg-dark-subtle text-center" id="Destino">
+        <h2>Escolha seu Destino</h2>
+        <p>NÃ£o deixe para depois aproveitas as ofertas exclusivas !</p>
+        <form method="get" action="" >
+            <fieldset><table align="center">
+                <tr>
+                    <td>
+                    <legend>Qual serÃ¡ o seu destino ?&nbsp &nbsp &nbsp &nbsp</legend>
+                    <label>
+                        <br><select name="cidade">
+                            <option value="SaoPaulo">SÃ£o Paulo</option>
+                            <option value="riodejaneiro">Rio de Janeiro</option>
+                            <option value="curitiba">Curitiba</option>
+                            <option value="belohorizonte">Belo Horizonte</option>
+                            <option value="salvador">Salvador</option>
+                            <option value="nisekojapan">Niseko Japan</option>
+                        </select>      
+                    </label>
+                    &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                    </td>   
+                    <td>
+                        <label>
+                            <legend> Data de ida</legend><br>
+                            <input type="date" name="dataida" value="Data Ida"> 
+                        </label>
+                        &nbsp &nbsp &nbsp &nbsp 
+                    </td> 
+                    <td>
+                        <label>
+                            <legend> Data de Volta</legend><br>
+                            <input type="date" name="datavolta" value="Data Volta"> 
+                        </label>
+                        &nbsp &nbsp &nbsp &nbsp
+                    </td> 
+                    <td>
+                        <label>
+                            <legend> Quantidade Pessoas</legend><br>
+                            <input type="number" name="numpessoas" value="Numero de Pessoas"> 
+                        </label>
+                        &nbsp &nbsp &nbsp &nbsp
+                    </td> 
+                    <td>
+                        <label>
+                            <legend> Bagagem Extra ? &nbsp &nbsp &nbsp &nbsp</legend><br>
+                                <select name="bagagem">
+                                    <option value="SIM">SIM</option>
+                                    <option value="NAO">NÃƒO</option>
+                                </select> 
+                        </label>
+                        &nbsp &nbsp &nbsp &nbsp 
+                    </td> 
+                    <td> 
+                        <label>
+                            <legend> Quantidade Bagagem</legend><br>
+                            <input type="number" name="numbagagem" value="Numero de Bagagens"> 
+                        </label>
+                        &nbsp &nbsp &nbsp &nbsp
+                    </td> 
+                </tr></table>
+            </fieldset>
+    </section>
+        <section class=" container-fluid bg-light text-center" id="Dados">
+            <fieldset>
+                <h2>Dados Pessoais</h2>
+                <p> Insira os dados do responsÃ¡vel pelo Pagamento e ou Titular do CartÃ£o</p>
+                <label>
+                    <legend>Nome Completo</legend>
+                        <input type="text" name="nome" value=""> 
+                </label>
+                <br><br>
+                <label>
+                    <legend>Email</legend>
+                        <input type="email" name="email" value="">
+                </label>
+                <br><br>    
+                <label>
+                    <legend>Telefone</legend>
+                        <input type="tel" name="tel" value="">
+                </label>
+            </fieldset>
+        </section>
+            <hr>
+            <section class=" container-fluid bg-dark-subtle text-center" id="Pacotes">
+                <fieldset >
+                <h2>Pacote de Viagens</h2>
+                <p>Aqui vocÃª encontrarÃ¡ tudo para o seu momento. </p>
+                <label>
+                    <legend>Acrescentar ao seu pacote :</legend>
+                        <input type="checkbox" name="AluguelCarro" value="Aluguel Carro"> Aluguel de Carro
+                        <input type="checkbox" name="Pet" value="Pet"> Pet
+                        <input type="checkbox" name="Alimentacao" value="Alimentacao"> AlimentaÃ§Ã£o
+                        <input type="checkbox" name="Passeios" value="Passeios"> Passeios
+                        <br>
+                        <p>Descreva suas PreferÃªncias de Viagens <br></p><textarea name="perfil" rows="5"></textarea>
+                </label>
+               
+                </fieldset>
+            </section>
+            <hr>
+        <section class=" container-fluid bg-light text-center" id="Pagamento">
+            <fieldset>
+                <h2>Formas de Pagamento</h2>
+                <legend><p>Esolha a Forma de Pagamento para VocÃª :</p></legend>
+                <p> Pague da melhor maneira que encaixe no seu bolso </p>
+                <label>
+                        <input type="radio" id="pix" name="pagamento" value="pix"> PIX
+                </label>
+                <label>
+                    <input type="radio" id="credito" name="pagamento" value="credito"> Credito
+                </label>
+                <label>
+                    <input type="radio" id="debito" name="pagamento" value="debito"> Debito
+                </label>
+               
+            </fieldset>
+        </section>    
+            <br>
+            <input type="submit" name="enviar" value="Enviar">
+        </form>
+    <footer class=" container-fluid bg-warning"><p>Copyright 2024 Desenvolvido por Dirceu Carvalho Junior</p></footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </body>
-    
 </html>
-

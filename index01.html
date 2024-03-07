@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- <meta charset="UTF-8"> Optado por não acrescentar para permanecer com a escrita conforme digitado com acentos-->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="">
+
+        <title>Pratica Integradora Desenvolvimento de Software</title>
+        <style>
+            p{
+                font-size:20px; color: blue;
+                }
+        </style>
+        <link rel="stylesheet" href="./Css/estilo.css" type="text/css">
+    </head>
+   
+    <body>
+        <script>
+             function showAlert(){
+                var nome= document.getElementById('nomes');
+                var sobnome= document.getElementById('sobrenomes');
+                var email= document.getElementById('email');
+                var data= document.getElementById('data'); 
+                var idade = 2022;
+                console.log(nome.value+sobnome.value);
+                console.log(email.value);
+                console.log('2022'-data.value);
+                var element = document.querySelector(".divtexto");
+                var text = document.createTextNode(nome.value + " " +sobrenomes.value + " parabens pelos seus "+ (idade - data.value) + " anos," + "Email confirmado:" + email.value);
+                element.appendChild(text);
+                } 
+        </script>
+
+        <center>
+            <p>
+                <h1>Atividade Prática 2 – Elementos Básicos</h1>
+             </p>
+        </center>
+        <hr>
+        <br> 
+        <p><h2>Atividade Prática</h2></p>
+        <p>Nesta atividade prática, iniciaremos nosso código HTML com uma estrutura básica para desenvolver um site com um layout que evoluirá a cada prática que faremos. Então, para começar faremos os seguintes passos:
+        <ol><li>1º Passo: Crie uma pasta no seu computador com o nome de PraticaSoftware_Seu_nome_e_sobrenome.</li>
+            <li>2º Passo: Entre nessa pasta e crie o arquivo chamado index.html</li>
+            <li>3º Passo: Nesta pasta também crie a pasta img, css e js</li>
+            <li>4º Passo: No arquivo index.html, criei os elementos base para iniciarmos um documento HTML. 
+                Aqui você deve definir os elementos . Inclua também a tag title com o conteúdo “Pratica Integradora Desenvolvimento de Software”
+            </li>
+        </ol>      
+        </p>
+        <div id="form" name="form">
+        <fieldset>
+        <form action="" ID="formulario" name="formulario" method="get" text-align="center" width="200">
+           <div> 
+            <label id="nome">Nome:</label>
+            <input type="text" maxlength = "100"  placeholder="Seu nome" name="nome"><br>
+            <label id="sobre">Sobrenome:</label>
+            <input type="text" maxlength = "100"  placeholder="Sobrenome" name="sobrenome"><br>
+           
+            <label> Email: </label>   
+             <input type="email"  name="email"><br>
+             <select size = "1" name="sexo">
+                <option selected> Masculino </option>
+                <option> Feminino </option>
+             </select>
+            <br>
+            <label for="Pais">Pais*</label><br>
+            <select name="pais" id="pais">
+                <option value="BR">Brasil</option>
+                <option value="MX">MEXICO</option>
+                <option value="EUA">E.U.A</option>
+            </select>
+            
+
+           </div>                  
+           <div>
+             <label for="cep">Cep*  </label><br>
+             <input type="text" name="cep" id="cep">
+           </div> <br>
+            <label> Observação: </label><br>   
+           <textarea  cols="30" rows="3" name="obs">
+          </textarea>
+            <br>
+           <input onclick="showAlert" type="submit"  value="Enviar" name="Enviar" id="btn_envia">
+  
+            <input type="reset" value="Limpar" name="limpar">
+        </form>
+        </fieldset>
+        </div>
+        <table border=1 cellspacing="2" height="150" width="180">
+            <caption><h3> Atividade Pratica 3</h3></caption>
+            <thead></thead>
+            <tr><td colspan="3">Estilo CSS</td></tr>
+            <tr>
+                <td> Imagem de Fundo</td>
+                <td> Cor do Fundo</td>
+                <td> Cor do Texto</td>
+
+            </tr>
+        </table>
+        <br>
+        <center>
+            <p>
+                <h1>Atividade Prática 3 – Fundamentos do JavaScript</h1>
+             </p>
+             <form name="tarefa3" id="tarefa3" method="post" action="showAlert("agora vai")">
+                <label id="lblnomes">Digite seu Nome:</label>
+                <input type="text" name="nomes" id="nomes"><br>
+                <label id="lblsobrenome">Digite seu Sobrenome:</label>
+                <input type="text" name="sobrenomes" id="sobrenomes"><br>
+                <label id="lblemail">Digite seu Email:</label>
+                <input type="email" name="email" id="email"><br>
+                <label id="lbldata">Digite Ano Nascimento:</label>
+                <input type="number" name="data" id="data"><br>
+             </form>
+                <button type="button" onclick="showAlert()"> Envia</button>
+            
+         
+        
+        <h2><div class="divtexto" id="divtexto">Bem vindo </div></h2>
+        </center>
+<marquee> Nome:Dirceu Carvalho Junior   Modulo:2B Prática Integradora Desenvolvimento de Software </marquee>
+         
+    </body>
+    
+</html>
+

@@ -15,6 +15,7 @@
                     <a  class=" navbar-brand text-white" href="#tabela">Viagens dos Sonhos</a>
                     <button class=" navbar-toggler" type="button" data-bs-toggle=" collapse" data-bs-target="wnavbarSupportedContent" aria-controls=" navbarSupportedContent">
                     <span class=" navbar-toggler-icon"  ></span>
+                    <span class=" navbar-toggler-icon"  ></span>
                     </button>
                     <div    class=" collapse navbar-collapse    justify-content-end text-white" id=" navbarSupportedContent">
                         <ul class=" navbar-nav ">
@@ -166,12 +167,54 @@
                 <fieldset >
                 <h2>Pacote de Viagens</h2>
                 <p>Aqui você encontrará tudo para o seu momento. </p>
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+                    
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="Img/kitpet.jpg" class="d-md-inline w-50" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5 >KIT PET</h5>
+                          <p ><h6 class="text-bg-light d-md-inline w-100">Porque ficar longe de quem Você AMA ? Não é mesmo? Traga seu Pet para viajar com você.</h6></p>
+                        </div>
+                      </div>
+                      <div class="carousel-item" data-bs-interval="2000">
+                        <img src="Img/kitkids.jpg" class="d-md-inline w-50" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5 class="text-bg-light d-md-inline">KIT KIDS</h5>
+                          <p><h6 class="text-bg-light d-md-inline w-50">Passeios, Brincadeiras, Aprendizado. Fique tranquilos seus filhos estarão seguros .</h6></p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="Img/kitrelax.jpg" class="d-md-inline w-50" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5 class="text-bg-light d-md-inline w-50">KIT RELAX</h5>
+                          <p><h6 class="text-bg-light d-md-inline w-50">Para você que Apreciar a Natureza, desfrute de momentos únicos e paisagens Lindas</h6></p>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+               
+                  </div>    
                 <label>
                     <legend>Acrescentar ao seu pacote :</legend>
                         <input type="checkbox" name="AluguelCarro" value="Aluguel Carro"> Aluguel de Carro
-                        <input type="checkbox" name="Pet" value="Pet"> Pet
+                        <input type="checkbox" name="KIT PET" value="Pet"> Kit Pet
                         <input type="checkbox" name="Alimentacao" value="Alimentacao"> Alimentação
                         <input type="checkbox" name="Passeios" value="Passeios"> Passeios
+<input type="checkbox" name="kitkids" value="Kitkids"> Kit Kids
+                        <input type="checkbox" name="kitrelax" value="Kitrelax"> Kit Relax
                         <br>
                         <p>Descreva suas Preferências de Viagens <br></p><textarea name="perfil" rows="5"></textarea>
                 </label>
@@ -197,7 +240,8 @@
             </fieldset>
         </section>    
             <br>
-            <input type="submit" name="enviar" value="Enviar">
+            <center><input type="submit" name="enviar" value="Enviar"></center>
+            <br>
         </form>
     <footer class=" container-fluid bg-warning"><p>Copyright 2024 Desenvolvido por Dirceu Carvalho Junior</p></footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
